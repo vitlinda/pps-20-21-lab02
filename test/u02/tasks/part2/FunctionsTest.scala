@@ -1,9 +1,7 @@
-package u02.tasks
+package u02.tasks.part2
 
-import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions._
-import u02.tasks.es2a.Functions
-import u02.tasks.es2a.Functions._
+import org.junit.jupiter.api.Test
 
 class FunctionsTest {
 
