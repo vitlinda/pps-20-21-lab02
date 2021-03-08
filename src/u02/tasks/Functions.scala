@@ -21,4 +21,5 @@ object Functions {
   //  def negAsMethod(predicate: String => Boolean): String => Boolean = s => (!predicate(s))
   def negAsMethod(predicate: String => Boolean): String => Boolean = !predicate(_)
 
+  def genericNeg[A, B](predicate: A => B): A => B = a => predicate(a)
 }
