@@ -2,7 +2,8 @@ package u02.tasks
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions._
-import u02.tasks.Functions._
+import u02.tasks.es2a.Functions
+import u02.tasks.es2a.Functions._
 
 class FunctionsTest {
 

@@ -1,4 +1,4 @@
-package u02.tasks
+package u02.tasks.es2a
 
 object Functions {
 
