@@ -40,10 +40,16 @@ class FunctionsTest {
   }
 
   @Test def testGenericNeg() {
-    //    val negation: Int => Int = s => -s
-    val negation: Int => Int = -_
-    val positive = function.genericNeg(negation)
-    assertEquals(1, positive(-1))
+    //    val negation: Int => Boolean = s => s > 0
+    val negative: Int => Boolean = _ > 0
+    val notNegative = function.genericNeg(negative)
+    assertTrue( notNegative(-1))
+  }
+
+  @Test def testNotEmptyStillWorksWithGenericNeg() {
+    val empty: String => Boolean = _ == ""
+    val notEmpty = function.genericNeg(empty);
+    assertTrue(notEmpty("foo"))
   }
 
 }
