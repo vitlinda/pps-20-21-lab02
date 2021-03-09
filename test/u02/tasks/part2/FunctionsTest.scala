@@ -40,9 +40,9 @@ class FunctionsTest {
 
   @Test def testGenericNeg() {
     //    val negation: Int => Boolean = s => s > 0
-    val negative: Int => Boolean = _ > 0
-    val notNegative = function.genericNeg(negative)
-    assertTrue( notNegative(-1))
+    val positive: Int => Boolean = _ > 0
+    val notPositive = function.genericNeg(positive)
+    assertTrue(notPositive(-1))
   }
 
   @Test def testNotEmptyStillWorksWithGenericNeg() {
