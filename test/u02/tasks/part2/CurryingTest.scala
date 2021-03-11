@@ -16,4 +16,10 @@ class CurryingTest {
     val result2 = partialResult2(3)
     assertFalse(result2)
   }
+
+  @Test def testP2() {
+    assertTrue(currying.p2(1,2,3))
+    assertFalse(currying.p2(2,1,3))
+    assertFalse(currying.p2(2,1,3))
+  }
 }
