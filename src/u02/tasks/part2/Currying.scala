@@ -7,4 +7,5 @@ object Currying {
 
   def p3(a: Int)(b: Int): Int => Boolean = c => (a <= b) && (b <= c)
 
+  def p4(a: Int, b: Int, c: Int): Boolean = (a <= b) && (b <= c)
 }
