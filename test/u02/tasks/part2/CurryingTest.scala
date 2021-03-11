@@ -22,4 +22,14 @@ class CurryingTest {
     assertFalse(currying.p2(2,1,3))
     assertFalse(currying.p2(2,1,3))
   }
+
+  @Test def testP3() {
+    val partialResult1 = currying.p3(1)(2)
+    val result1 = partialResult1(3)
+    assertTrue(result1)
+
+    val partialResult2 = currying.p3(3)(2)
+    val result2 = partialResult2(3)
+    assertFalse(result2)
+  }
 }
