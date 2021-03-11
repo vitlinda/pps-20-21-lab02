@@ -15,4 +15,10 @@ class ShapeTest {
     assertEquals(13, area(Circle(2)))
   }
 
+  @Test def SquarePerimeterAndAreaTest() = {
+    assertEquals(8, perimeter(Square(2)))
+    assertEquals(4, area(Square(2)))
+  }
+
+
 }
