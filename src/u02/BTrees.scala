@@ -12,8 +12,8 @@ object BTrees extends App {
 
     def operation[A, B](t: Tree[A], predicate: Option[A => Boolean], op: (B, B) => B): B = (t, predicate) match {
       case (Branch(l, r), _) => op(operation(l, predicate, op), operation(r, predicate, op) )
-//      case (Leaf(e), Some(p)) if p(e) => 1
-//      case _ => 0
+      case (Leaf(e), Some(p)) if p(e) => ???
+      case _ => ???
     }
 
     def size[A](t: Tree[A]): Int = t match {
@@ -37,5 +37,5 @@ object BTrees extends App {
   val tree = Branch(Branch(Leaf(1),Leaf(2)),Leaf(1))
 
   val count: (Int, Int) => Int = _ + _
-//  operation(tree, Some((x: Int) => x == 1), count)
+  operation(tree, Some((x: Int) => x == 1), count)
 }
