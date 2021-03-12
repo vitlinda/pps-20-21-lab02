@@ -38,6 +38,11 @@ object Optionals extends App {
       case (Some(a1), Some(a2)) => Some(p(a1, a2))
       case _ => None()
     }
+
+    def operation[A](opt: Option[A])(p: A => A): Option[A] = opt match {
+      case Some(a) => Some(p(a))
+      case _ => None()
+    }
   }
 
   import Option._
@@ -62,5 +67,14 @@ object Optionals extends App {
   println(map2(Some(3),None[Int])(_ > _)) //None
   println(map2(None[Int],None[Int])(_ > _)) //None
   println(map2(None[Int],Some(3))(_ > _)) //None
+
+  val double: Int => Int = x => x * x
+  println((operation(Some(5))(double))) // Some(25)
+  println((map(None[Int])(double))) //None
+
+  val invert: Boolean => Boolean = !_
+  println((operation(Some(true))(invert))) // Some(false)
+  println((map(None[Boolean])(invert))) //None
+
 
 }
